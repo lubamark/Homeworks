@@ -1,0 +1,16 @@
+body {
+  background-color: gray;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a:focus {
+  color: black;
+}
