@@ -117,3 +117,19 @@ button14.addEventListener("click", function () {
 input14.addEventListener("focus", function () {
   input14.value = "";
 });
+
+//10
+let input15 = document.querySelector("#inp15");
+input15.addEventListener("blur", function () {
+  let split = input15.value.split("");
+  for (let elem of split) {
+    if (Number(elem) === 3) {
+      input15.value = true;
+    } else {
+      input15.value = false;
+    }
+  }
+});
+input15.addEventListener("focus", function () {
+  input15.value = "";
+});
