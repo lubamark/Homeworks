@@ -47,3 +47,22 @@ input6.addEventListener("blur", function () {
 input6.addEventListener("focus", function () {
   input6.value = "";
 });
+
+//5
+let input7 = document.querySelector("#inp7");
+let input8 = document.querySelector("#inp8");
+let input9 = document.querySelector("#inp9");
+let input10 = document.querySelector("#inp10");
+
+input7.addEventListener("blur", function () {
+  let arr = input7.value.split(" ");
+  input8.value = arr[0];
+  input9.value = arr[1];
+  input10.value = arr[2];
+});
+input7.addEventListener("focus", function () {
+  input7.value = "";
+  input8.value = "";
+  input9.value = "";
+  input10.value = "";
+});
