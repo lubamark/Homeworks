@@ -33,3 +33,17 @@ sumNumber.addEventListener("blur", function () {
 sumNumber.addEventListener("focus", function () {
   sumNumber.value = "";
 });
+
+//4
+let input6 = document.querySelector("#inp6");
+input6.addEventListener("blur", function () {
+  let sum = 0;
+  let arr = input6.value.split(",");
+  for (let elem of arr) {
+    sum += Number(elem) / arr.length;
+    input6.value = sum;
+  }
+});
+input6.addEventListener("focus", function () {
+  input6.value = "";
+});
