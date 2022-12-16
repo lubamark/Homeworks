@@ -101,3 +101,19 @@ input13.addEventListener("blur", function () {
 input13.addEventListener("focus", function () {
   input13.value = "";
 });
+
+//9
+let input14 = document.querySelector("#inp14");
+let button14 = document.querySelector("#button14");
+
+button14.addEventListener("click", function () {
+  let reverse = input14.value.split("").reverse().join("");
+  if (input14.value === reverse) {
+    input14.value = "палиндром";
+  } else {
+    input14.value = "не палиндром";
+  }
+});
+input14.addEventListener("focus", function () {
+  input14.value = "";
+});
