@@ -66,3 +66,17 @@ input7.addEventListener("focus", function () {
   input9.value = "";
   input10.value = "";
 });
+
+//6
+let input11 = document.querySelector("#inp11");
+input11.addEventListener("blur", function () {
+  let arr = input11.value.split(" ");
+  let arr2 = [];
+  for (let elem of arr) {
+    arr2.push(elem.slice(0, 1).toUpperCase() + elem.slice(1));
+    input11.value = arr2.join(" ");
+  }
+});
+input11.addEventListener("focus", function () {
+  input11.value = "";
+});
