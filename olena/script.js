@@ -90,3 +90,14 @@ input12.addEventListener("blur", function () {
 input12.addEventListener("focus", function () {
   input12.value = "";
 });
+
+//8
+let input13 = document.querySelector("#inp13");
+input13.addEventListener("blur", function () {
+  let d = input13.value.split(".").reverse().join("-");
+
+  input13.value = d;
+});
+input13.addEventListener("focus", function () {
+  input13.value = "";
+});
