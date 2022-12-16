@@ -1,12 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
     <h1>Helena's homeworks</h1>
-  </body>
+<p> 262(1) Получите значение его атрибута value.</p>
+<input id="inp1" value="text">
+<p> 262(2) Получите значение его атрибута class.</p>
+<input id="inp2" class="www zzz">
+<p> 262(3) Установите его атрибут value в значение 'text'.</p>
+<input id="inp3">
+<p> 262(4) Дан инпут. &ltinput id="inp4"&gt Установите ему атрибут class в значение 'valid'.</p>
+<input id="inp4">
+<p> 262(5) Дан инпут. &ltinput id="inp5" value="text"&gt  Удалите у него аттрибут value.</p>
+<input id="inp5" value="text">
+<p> 262(6) Дан инпут. &ltinput id="inp6" value="text"&gt Проверьте наличие у него атрибута value.</p>
+<input id="inp6" value="text">
+<p> 263(1) Дан элемент: &ltp id="paragr" class="www ggg zzz" &gt &lt/p&gt
+Узнайте количество его классов.</p>
+<p id="paragr" class="www ggg zzz"></p>
+<p> 263(2) Дан элемент: &ltp id="paragr1" class="www ggg zzz" &gt &lt/p&gt
+    Переберите в цикле его классы.</p>
+<p id="paragr1" class="www ggg zzz"></p>
+<p> 263(3) Дан элемент: &ltp id="paragr2" class="www ggg zzz" &gt &lt/p&gt
+    Добавьте ему класс xxx.</p>
+<p id="paragr2" class="www ggg zzz"></p>
+<p> 263(4) Дан элемент: &ltp id="paragr2" class="www ggg zzz" &gt &lt/p&gt
+    Удалите у него класс www и класс zzz.</p>
+<p id="paragr3" class="www ggg zzz"></p>
+<p> 263(5) Дан элемент: &ltp id="paragr2" class="www ggg zzz" &gt &lt/p&gt
+    Проверьте наличие у него класса ggg.</p>
+<p id="paragr4" class="www ggg zzz"></p>
+<p> 263(6) Дан элемент: &ltp id="paragr2" class="www ggg zzz" &gt &lt/p&gt
+    Добавьте ему класс www, если его нет и удалите - если есть.</p>
+<p id="paragr5" class="www ggg zzz"></p>
+<p> 264(1) Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.</p>
+<div id="div">hi</div>
+<input id="button" type="submit">
+<p> 264(2) Дан див с текстом и кнопка. По клику на кнопку установите диву размер 
+    шрифта в 20px, а также верхнюю границу и фон.</p>
+<div id="div1">hi</div>
+<button id="button1"> Press me </button>
+<p> 264(3) Дан список ul и кнопка. По клику на кнопку добавьте тегам li свойство float в значении left.</p>
+<ul>
+    <li class = "lli"> Mr Smith </li>
+    <li class = "lli"> Mr Black </li>
+    <li class = "lli"> Mr White </li>
+</ul>
+<button id="button2"> Press me </button>
+<p> 265(2) Дан абзац. Даны кнопки 'перечеркнуть', 'сделать жирным', 'сделать красным'.
+     Пусть по нажатию на каждую кнопку заданное действие происходит с абзацем (становится красным, например).</p>
+<p id="paragr6">Hi</p>
+<button id="button3"> Crossed </button>
+<button id="button4"> Bold </button>
+<button id="button5"> Red </button>
+<p> 265(3) Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки.</p>
+<p id="paragr7">Hi</p>
+<button id="button6"> Crossed </button>
+<button id="button7"> Bold </button>
+<button id="button8"> Red </button>
+<p> 266(1) Найдите первого потомка этого элемента и сделайте его текст красного цвета.</p>
+<ul id="list">
+    <li>text1</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<button id="button9"> Red </button>
+<p> 266(3) Найдите всех потомков этого элемента и добавьте им в конец текст '!'.</p>
+<ul id="list1">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<button id="button10"> ADD ! to all </button>
+<p> 266(4) Найдите родителя элемента elem и задайте ему красную границу.</p>
+<div>
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li id="elem">text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+</div>
+<button id="button11"> Find parent </button>
+<p> 266(5) Найдите ближайшего родителя элемента elem1, являющегося тегом div.</p>
+<header>
+    <div>
+        <p>
+            <span id="elem1"></span>
+        </p>
+    </div>
+</header>
+<button id="button12"> Find closest parent </button>
+<p> 266(6) Найдите ближайшего родителя элемента elem2, являющегося элементом с классом www.</p>
+<header>
+    <div class="www">
+        <p class="www">
+            <span id="elem2"></span>
+        </p>
+    </div>
+</header>
+<button id="button13"> Find closest parent www </button>
+<p> 266(7) Найдите соседа сверху элемента elem3 и добавьте ему в конец текст '!'.</p>
+<ul>
+    <li>text</li>
+    <li>text</li>
+    <li id="elem3">text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<button id="button14"> Find previous element </button>
+<p> 266(9) Найдите соседа снизу соседа снизу элемента elem4 (следующий элемент за соседним) и 
+    добавьте ему в конец текст '!'.</p>
+<ul>
+    <li>text</li>
+    <li>text</li>
+    <li id="elem4">text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<button id="button15"> Find next of next </button>
+<p> 266(10) Дан элемент elem5 Поменяйте местами текст его соседа сверху и текст его соседа снизу.</p>
+<ul>
+    <li>text1</li>
+    <li>text2</li>
+    <li id="elem5">text3</li>
+    <li>text4</li>
+    <li>text5</li>
+</ul>
+<button id="button16"> Change </button>
+<p> 267(1) Дан елемент elem6.Получите этот элемент с помощью метода getElementById и 
+    установите ему какой-нибудь текст.</p>
+<div id="elem6"></div>
+<button id="button17"> Assign text </button>
+<p> 267(2) Получите все теги li по имени тега и сделайте их текст красного цвета.</p>
+<ul>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<button id="button18"> Assign text </button>
+<p> 267(3) Получите элементы по имени класса и сделайте их текст красного цвета.</p>
+<p class="www1">elem 1</p>
+<p class="www1">elem 2</p>
+<p class="www1">elem 3</p>
+<button id="button19"> Get Elby Class </button>
+<p> 268(1) Найдите внутри родителя элементы с классом www и 
+запишите их в переменную elems2. Затем найдите внутри родителя элементы
+с классом ggg и запишите их в переменную elems3.</p>
+<div id="parent">
+    <p class="www">text</p>
+    <p class="www">text</p>
+    <p class="www">text</p>
+    <p class="ggg">text</p>
+    <p class="ggg">text</p>
+    <p class="ggg">text</p>
+</div>
+<button id="button20"> Find Class www </button>
+<button id="button21"> Find Class ggg </button>
+<p> 269(1) Сделайте так, чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text.</p>
+<div id="div2" data-text="str">text</div>
+<script src="index.js"></script>
+</body>
+
 </html>
+
