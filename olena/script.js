@@ -80,3 +80,13 @@ input11.addEventListener("blur", function () {
 input11.addEventListener("focus", function () {
   input11.value = "";
 });
+
+//7
+let input12 = document.querySelector("#inp12");
+input12.addEventListener("blur", function () {
+  let arr = input12.value.split(" ");
+  input12.value = arr.length;
+});
+input12.addEventListener("focus", function () {
+  input12.value = "";
+});
