@@ -1,3 +1,4 @@
+//1
 let input = document.querySelector("#inp1");
 let paragraph = document.querySelector("#elem");
 input.addEventListener("blur", function () {
@@ -5,6 +6,7 @@ input.addEventListener("blur", function () {
   input.value = "";
 });
 
+//2
 let input2 = document.querySelector("#inp2");
 let input3 = document.querySelector("#inp3");
 let input4 = document.querySelector("#inp4");
@@ -16,4 +18,18 @@ button.addEventListener("click", function () {
   input2.value = "";
   input3.value = "";
   input4.value = "";
+});
+
+//3
+let sumNumber = document.querySelector("#inp5");
+
+sumNumber.addEventListener("blur", function () {
+  let sum = 0;
+  for (let elem of sumNumber.value) {
+    sum += Number(elem);
+    sumNumber.value = sum;
+  }
+});
+sumNumber.addEventListener("focus", function () {
+  sumNumber.value = "";
 });
