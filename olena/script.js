@@ -133,3 +133,19 @@ input15.addEventListener("blur", function () {
 input15.addEventListener("focus", function () {
   input15.value = "";
 });
+
+//11
+let paragraph13 = document.querySelectorAll("#elem13");
+let button15 = document.querySelector("#button15");
+let button16 = document.querySelector("#button16");
+button15.addEventListener("click", function () {
+  let arr = [];
+  for (let elem of paragraph13) {
+    arr.push((elem.textContent += arr.length + 1));
+  }
+});
+button16.addEventListener("click", function () {
+  for (let elem of paragraph13) {
+    elem.textContent = "ordinal number ";
+  }
+});
