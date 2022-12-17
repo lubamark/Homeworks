@@ -210,3 +210,28 @@ smaller.addEventListener("click", function () {
     input20.value = 0;
   }
 });
+
+//17
+let input21 = document.querySelector("#elem21");
+let paragraph22 = document.querySelector("#elem22");
+let paragraph23 = document.querySelector("#elem23");
+let button21 = document.querySelector("#button21");
+paragraph22.addEventListener("click", quantityClick);
+paragraph23.addEventListener("click", quantityClick);
+let sum = 0;
+function quantityClick() {
+  sum++;
+  input21.value = sum;
+}
+button21.addEventListener("click", function () {
+  input21.value = "";
+});
+
+//18
+let elements = document.querySelector("#elem24");
+let elements2 = document.querySelector("#elem25");
+elements.addEventListener("mouseover", getSlice);
+elements2.addEventListener("mouseover", getSlice);
+function getSlice() {
+  this.textContent = this.textContent.slice(0, 10) + ":";
+}
