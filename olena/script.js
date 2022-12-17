@@ -173,3 +173,40 @@ button18.addEventListener("click", function addArrow() {
   }
   this.removeEventListener("click", addArrow);
 });
+
+//14
+let paragraph16 = document.querySelector("#elem16");
+let paragraph17 = document.querySelector("#elem17");
+let paragraph18 = document.querySelector("#elem18");
+paragraph16.addEventListener("click", getSquareOfNumber);
+paragraph17.addEventListener("click", getSquareOfNumber);
+paragraph18.addEventListener("click", getSquareOfNumber);
+function getSquareOfNumber() {
+  this.textContent *= this.textContent;
+}
+
+//15
+let input19 = document.querySelector("#elem19");
+input19.addEventListener("blur", function () {
+  let date = new Date(input19.value.split(".").reverse().join(","));
+  let day = date.getDay();
+  let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+  input19.value = days[day];
+});
+input19.addEventListener("focus", function () {
+  input19.value = "";
+});
+
+//16
+let input20 = document.querySelector("#elem20");
+let bigger = document.querySelector("#bigger");
+let smaller = document.querySelector("#smaller");
+bigger.addEventListener("click", function () {
+  input20.value = Number(input20.value) + 1;
+});
+smaller.addEventListener("click", function () {
+  input20.value = Number(input20.value) - 1;
+  if (Number(input20.value) === -1) {
+    input20.value = 0;
+  }
+});
