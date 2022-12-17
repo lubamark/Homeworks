@@ -235,3 +235,17 @@ elements2.addEventListener("mouseover", getSlice);
 function getSlice() {
   this.textContent = this.textContent.slice(0, 10) + ":";
 }
+
+//19
+let input26 = document.querySelector("#elem26");
+input26.addEventListener("blur", function () {
+  if (Number(input26.value) >= 1 && Number(input26.value) <= 100) {
+    this.style.background = "green";
+  } else {
+    this.style.background = "red";
+  }
+});
+input26.addEventListener("focus", function () {
+  input26.value = "";
+  this.style.background = "white";
+});
