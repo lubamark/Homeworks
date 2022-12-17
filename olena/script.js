@@ -144,8 +144,32 @@ button15.addEventListener("click", function () {
     arr.push((elem.textContent += arr.length + 1));
   }
 });
-button16.addEventListener("click", function () {
+button16.addEventListener("click", function getClean() {
   for (let elem of paragraph13) {
     elem.textContent = "ordinal number ";
   }
+});
+
+//12
+let site = document.querySelectorAll("#elem14");
+let button17 = document.querySelector("#button17");
+button17.addEventListener("click", addLink);
+function addLink() {
+  let arr = [];
+  for (let elem of site) {
+    arr.push((elem.textContent = elem.textContent + "(" + elem.href + ")"));
+  }
+  this.removeEventListener("click", addLink);
+}
+
+//13
+let site2 = document.querySelectorAll("#elem15");
+let button18 = document.querySelector("#button18");
+button18.addEventListener("click", function addArrow() {
+  for (let elem of site2) {
+    if (elem.href.indexOf("http://") === 0) {
+      elem.textContent = elem.textContent + "\u2192";
+    }
+  }
+  this.removeEventListener("click", addArrow);
 });
