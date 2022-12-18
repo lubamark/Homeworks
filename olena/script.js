@@ -5,6 +5,9 @@ input.addEventListener("blur", function () {
   paragraph.textContent += input.value;
   input.value = "";
 });
+input.addEventListener("focus", function () {
+  paragraph.textContent = "Абзац";
+});
 
 //2
 let input2 = document.querySelector("#inp2");
@@ -40,7 +43,7 @@ input6.addEventListener("blur", function () {
   let sum = 0;
   let arr = input6.value.split(",");
   for (let elem of arr) {
-    sum += Number(elem) / arr.length;
+    sum += elem / arr.length;
     input6.value = sum;
   }
 });
@@ -122,9 +125,11 @@ input14.addEventListener("focus", function () {
 let input15 = document.querySelector("#inp15");
 input15.addEventListener("blur", function () {
   let split = input15.value.split("");
+
   for (let elem of split) {
     if (Number(elem) === 3) {
       input15.value = true;
+      break;
     } else {
       input15.value = false;
     }
@@ -225,6 +230,7 @@ function quantityClick() {
 }
 button21.addEventListener("click", function () {
   input21.value = "";
+  sum = 0;
 });
 
 //18
@@ -233,7 +239,7 @@ let elements2 = document.querySelector("#elem25");
 elements.addEventListener("mouseover", getSlice);
 elements2.addEventListener("mouseover", getSlice);
 function getSlice() {
-  this.textContent = this.textContent.slice(0, 10) + ":";
+  this.textContent = this.textContent.slice(0, 10) + "...";
 }
 
 //19
@@ -241,6 +247,8 @@ let input26 = document.querySelector("#elem26");
 input26.addEventListener("blur", function () {
   if (Number(input26.value) >= 1 && Number(input26.value) <= 100) {
     this.style.background = "green";
+  } else if (input26.value === "") {
+    this.style.background = "white";
   } else {
     this.style.background = "red";
   }
@@ -291,12 +299,13 @@ button34.addEventListener("click", function getFactorial() {
   let elem = Number(input33.value);
   for (let i = 1; i <= elem; i++) {
     paragraph32.textContent = total *= i;
-    this.removeEventListener("click", getFactorial);
+    //this.removeEventListener("click", getFactorial);
   }
 });
 input33.addEventListener("focus", function () {
   input33.value = "";
   paragraph32.textContent = "факториал";
+  total = 1;
 });
 
 //24
