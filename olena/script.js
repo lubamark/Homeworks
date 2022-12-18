@@ -273,3 +273,11 @@ button30.addEventListener("click", function () {
 function getRandom(min, max) {
   return Math.floor(Math.random() * max - min + 1) + min;
 }
+
+//22
+let input31 = document.querySelector("#elem31");
+let button32 = document.querySelector("#elem32");
+let paragraph31 = document.querySelector("#paragraph31");
+button32.addEventListener("click", function () {
+  paragraph31.textContent = (input31.value - 32) / 1.8;
+});
