@@ -281,3 +281,20 @@ let paragraph31 = document.querySelector("#paragraph31");
 button32.addEventListener("click", function () {
   paragraph31.textContent = (input31.value - 32) / 1.8;
 });
+
+//23
+let input33 = document.querySelector("#elem33");
+let button34 = document.querySelector("#elem34");
+let paragraph32 = document.querySelector("#paragraph32");
+let total = 1;
+button34.addEventListener("click", function getFactorial() {
+  let elem = Number(input33.value);
+  for (let i = 1; i <= elem; i++) {
+    paragraph32.textContent = total *= i;
+    this.removeEventListener("click", getFactorial);
+  }
+});
+input33.addEventListener("focus", function () {
+  input33.value = "";
+  paragraph32.textContent = "факториал";
+});
