@@ -249,3 +249,27 @@ input26.addEventListener("focus", function () {
   input26.value = "";
   this.style.background = "white";
 });
+
+//20
+let input27 = document.querySelector("#elem27");
+let button28 = document.querySelector("#elem28");
+button28.addEventListener("click", function () {
+  input27.value = Math.floor(
+    Math.random() * (99999999 - 10000000 + 1) + 10000000
+  );
+});
+
+//21
+let input29 = document.querySelector("#elem29");
+let button30 = document.querySelector("#elem30");
+let arr = [];
+button30.addEventListener("click", function () {
+  let split = input29.value.split("");
+  for (let elem of split) {
+    arr.push((arr[elem] = split[getRandom(0, split.length - 1)]));
+    input29.value = arr.join("");
+  }
+});
+function getRandom(min, max) {
+  return Math.floor(Math.random() * max - min + 1) + min;
+}
