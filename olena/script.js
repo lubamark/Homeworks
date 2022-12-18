@@ -298,3 +298,22 @@ input33.addEventListener("focus", function () {
   input33.value = "";
   paragraph32.textContent = "факториал";
 });
+
+//24
+let input35 = document.querySelector("#elem35");
+let input36 = document.querySelector("#elem36");
+let input37 = document.querySelector("#elem37");
+let button38 = document.querySelector("#elem38");
+let paragraph33 = document.querySelector("#paragraph33");
+button38.addEventListener("click", function () {
+  let discr = input36.value * input36.value - 4 * input35.value * input37.value;
+  if (discr < 0) {
+    paragraph33.textContent = "нет корней";
+  } else if (discr === 0) {
+    paragraph33.textContent = -input36.value / (2 * input35.value);
+  } else if (discr > 0) {
+    let x1 = (-input36.value + Math.sqrt(discr)) / (2 * input35.value);
+    let x2 = (-input36.value - Math.sqrt(discr)) / (2 * input35.value);
+    paragraph33.textContent = x1 + " " + x2;
+  }
+});
