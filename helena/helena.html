@@ -174,6 +174,190 @@
 <button id="button21"> Find Class ggg </button>
 <p> 269(1) Сделайте так, чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text.</p>
 <div id="div2" data-text="str">text</div>
+<p> 269(2) Даны дивы, содержащие в атрибуте data-num свой порядковый номер: Сделайте так, чтобы по клику 
+    на любой из дивов ему в конец записывался его порядковый номер.</p>
+    
+<div class = "w" data-num="1">text</div>
+<div class = "w" data-num="2">text</div>
+<div class = "w" data-num="3">text</div>
+<div class = "w" data-num="4">text</div>
+<div class = "w" data-num="5">text</div>
+<p> 269(3) Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней,
+    записывая их в какой-нибудь пользовательский атрибут. Пусть по клику на другую кнопку на экран 
+    выводится, сколько кликов было сделано по первой кнопке </p>
+<button id="button22"> Clicks counter </button>
+<button id="button23"> Result </button>
+<p id = "paragr8" data-counter = "0">   </p>
+<p> 269(4) В этом инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут. 
+    Сделайте так, чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось 
+    сообщение об этом. </p>
+<input id="elem11" data-length="5">
+<p id="paragr9"></p>
+<p> 269(5) В этом инпуте атрибуты data-min и data-max содержат диапазон. 
+    Сделайте так, чтобы по потери фокуса, если количество введенных символов не попадает в этот диапазон, 
+    выводилось сообщение об этом. </p>
+<input id="elem12" data-min="5" data-max="10">
+<p id="paragr10"></p>
+<p> 269(6) Сделайте так, чтобы по клику на див в конец его текста добавлялась стоимость покупки, 
+    равная цене, умноженной на количество. </p>
+<div id="elem13" data-product-price="1000" data-product-amount="5"> товар яблоки</div>
+<p> 269(7) Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num запишите порядковый номер этого абзаца.
+Используйте метод setAttribute. </p>
+<p class = "qqq"></p>
+<p class ="qqq"></p>
+<p class ="qqq"></p>
+<p> 270(1) Напишите код, который покажет разницу между lastChild и lastElementChild.
+<div id="elem15"><!--сomm-->text<span>tag<!--ggg--></span><!--оо--></div>
+<p> 270(2) Напишите код, который покажет разницу между nextSibling и nextElementSibling.</p>
+<ul>
+    <li>text1</li>
+    <li>text2</li>
+    <li id="elem16">text</li>
+    <!--HELLO-->
+    <li>text3</li>
+    <li>text4</li>
+</ul>
+<button id="button24"> Find next element </button>
+<p> 270(4) Переберите циклом все узлы этого дива и выведите их в консоль при помощи childNodes.</p>
+&ltdiv id="elem17"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem17">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(5) Переберите циклом все узлы этого дива и выведите их в консоль при помощи nodeName.</p>
+&ltdiv id="elem18"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem18">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(6) Переберите циклом все узлы этого дива и выведите в консоль только узлы-элементы и текстовые узлы. Используйте nodeType</p>
+&ltdiv id="elem19"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem19">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(7) Переберите циклом все узлы этого дива и выведите в консоль тексты всех узлов.</p>
+&ltdiv id="elem20"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem20">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(8) Переберите циклом все узлы этого дива и выведите в консоль тексты всех комментариев и текстовых узлов.</p>
+&ltdiv id="elem21"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem21">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(9) Переберите циклом все узлы этого дива и выведите в консоль тексты текстовых узлов и элементов.</p>
+&ltdiv id="elem22"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem22">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 270(10) Переберите циклом все узлы этого дива и каждому узлу в конец запишите его тип.</p>
+&ltdiv id="elem23"&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gttxt&ltb&gttag&lt/b&gt&lt!--com--&gt&lt/div&gt </p>
+<div id="elem23">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+<p> 271(1) Дан список с годами: Получите года, сумма цифр которых равна 6. Найдите сумму полученных годов.</p>
+<ul>
+    <li class = "years">2000</li>
+    <li class = "years">2004</li>
+    <li class = "years">2021</li>
+    <li class = "years">2022</li>
+    <li class = "years">2025</li>
+    <li class = "years">2031</li>
+</ul>
+<button id="button25"> Sum = 6 </button>
+<p> 273(1) Дан инпут и абзац. По потери фокуса в инпуте запишите значение инпута в конец текста абзаца.</p>
+<p id="paragr11"> </p>
+<input id="elem24">
+<p> 273(2) Дано несколько инпутов, абзац и кнопка. По нажатию на кнопку получите числа, стоящие в 
+    этих инпутах и запишите их сумму в абзац.</p>
+<input id="elem25">
+<input id="elem26">
+<input id="elem27">
+<p id="paragr12"> </p>
+<button id="button26">Sum</button>
+<p> 273(3) Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа.</p>
+<input id="elem28">
+<p id="paragr13"> </p>
+<p> 273(4) Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее 
+    арифметическое этих чисел (сумма делить на количество).</p>
+<input id="elem29">
+<p id="paragr14"> </p>
+<p> 273(5) Даны 4 инпута. В первый инпут вводится ФИО через пробел.  По потери фокуса запишите фамилию, 
+    имя и отчество в остальные 3 инпута.</p>
+<input id="elem30">
+<input id="elem31">
+<input id="elem32">
+<input id="elem33">
+<p> 273(6) Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, 
+    чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с 
+    большой буквы (в этом же инпуте).</p>
+<input id="elem34">
+<p> 273(7) Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте.</p>
+<input id="elem35">
+<p id="paragr15"> </p>
+<p> 273(8) Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса в этом же инпуте поставьте 
+    эту дату в формате 2016-12-31.</p>
+<p> Input data in dd.mm.yyyy format</p>
+<input id="elem36">
+<p id="paragr16"> </p>
+<p> 273(9) Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается 
+    с начала и с конца одинаково (например, мадам).</p>
+<input id="elem37">
+<p id="paragr17"> </p>
+<button id="button27">Word</button>
+<p> 273(10) Дан инпут. В него вводится число. Проверьте по потери фокуса, что это число содержит 
+    внутри себя цифру 3.</p>
+<input id="elem38">
+<p id="paragr18"> </p>
+<p> 273(11) Даны несколько абзацев и кнопка. По нажатию на кнопку запишите в конец каждого абзаца его порядковый номер.</p>
+<p id ="paragr19">red </p>
+<p id = "paragr20">blue </p>
+<p id = "paragr21">green </p>
+<button id="button28">Number</button>
+<p> 273(12) Даны ссылки. Добавьте в конец каждой ссылки ее href в круглых скобках. </p>
+<a id="elem39" href="https://www.auto-repair.pl/ "> auto </a>
+<a id="elem40" href="https://myfitnessplace.pl/"> fitness </a>
+<input id="button29" type="submit" value="button29">
+<p> 273(13) Даны ссылки. Если ссылка начинается с http://, то добавьте ей в конец стрелку → 
+    (делается так: &rarr;). </p>
+<a id="elem41" href="https://www.auto-repair.pl/ "> auto </a>
+<a id="elem42" href="https://myfitnessplace.pl/"> fitness </a>
+<input id="button30" type="submit" value="button30">
+<p> 273(14) Даны несколько абзацев с числами. По нажатию на любой абзац запишите в него 
+    квадрат числа, которое в нем находится. </p>
+<p id="paragr22">2 </p>
+<p id="paragr23">4 </p>
+<p id="paragr24">3 </p>
+<p> 273(15) ?????Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса 
+    узнайте день недели (словом), который приходится на эту дату. </p>
+<p> Input data in dd.mm.yyyy format</p>
+<input id="elem43" type = "date">
+<p id="paragr25 "> </p>
+<p> 273(16) Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или 
+    уменьшать на 1 значение инпута. Сделайте так, чтобы это значение не могло стать меньше нуля. </p>
+<input id="elem44">
+<button id="button31">+1</button>
+<button id="button32">-1</button>
+<p> 273(17) Дан инпут. Даны абзацы. Пусть в этот инпут записывается суммарное количество нажатий по этим абзацам.</p>
+<input id="elem45">
+<p id="paragr26"> Hello</p>
+<p id="paragr27"> World </p>
+<p> 273(18) На странице есть дивы. В них есть текст. Обойдите все дивы и обрежьте тот текст, 
+который в них стоит так, чтобы он стал длиной 10 символов. И добавьте троеточие в конец обрезанного текста</p>
+<div id = "div3">GGFDSDFGGGHG</div>
+<div id = "div4">ggggggggggggggggggggg</div>
+<div id = "div5">fffffffffffff</div>
+<button id="button33">Cut text</button>
+<p> 273(19) Дан инпут. В него вводится число. По потери фокуса проверьте, что в нем лежит число от 1 до 100. 
+    Если это так -покрасьте инпут в зеленый цвет, а если не так - в красный.</p>
+<input id="elem46">
+<p>273(20) Дан инпут и кнопка. По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут.</p>
+<input id="elem47">
+<button id="button34">Random string</button>
+<p> 273(21) Дан инпут и кнопка. Пользователь вводит в инпут какую-то строку. 
+    По нажатию на кнопку перемешайте введенные символы случайным образом и запишите ее обратно в инпут. </p>
+<input id="elem48">
+<button id="button35">Random string</button>
+<p> 273(22) Дан инпут, кнопка и абзац. В инпут вводится температура в градусах Фаренгейта. 
+    По клику на кнопку выведите в абзац температуру в градусах Цельсия.</p>
+<input id="elem49">
+<button id="button36">fahrenheit -> celsius</button>
+<p id="paragr28"> </p>
+<p> 273(23) Дан инпут, кнопка и абзац. В инпут вводится число. По нажатию на кнопку выведите в абзац факториал этого числа.</p>
+<input id="elem50">
+<button id="button37">Factorial</button>
+<p id="paragr29"> Factorial of </p>
+<p> 273(24) Даны 3 инпута, кнопка и абзац. В инпуты вводятся коэффициенты квадратного уравнения. 
+    По нажатию на кнопку найдите корни этого уравнения и выведите их в абзац.</p>
+<input id="elem51">
+<input id="elem52">
+<input id="elem53">
+<button id="button38">Equation roots</button>
+<p id="paragr30"> Equation roots </p>
 <script src="index.js"></script>
 </body>
 
