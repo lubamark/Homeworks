@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Текстареа</h2>
+    <textarea style="display: block" name="" id="textarea" cols="30" rows="10">
+Value</textarea
+    >
+    <button id="blockTextarea">Заблокировать</button>
+    <button id="unblockTextarea">Разблокировать</button>
+    <button id="readonlyTextarea">Только для чтения</button>
+    <button id="editableTextarea">Можно редактировать</button>
+    <button id="toggleDisabled">Переключить disabled</button>
+
+    <hr />
+
+    <h2>Инпут</h2>
+    <input id="inputNumber" type="number" />
+
+    <hr />
+    <h2>Чекбокс</h2>
+    <div>
+      <input id="checkbox" type="checkbox" />
+      <label for="checkbox">Дай пять</label>
+    </div>
+    <div>
+      <label><input id="checkbox2" type="checkbox" />Дай пять</label>
+    </div>
+
+    <hr />
+    <h2>Радиокнопки</h2>
+
+    <div id="radioButtons">
+      <input type="radio" name="r" value="1" checked />
+      <input type="radio" name="r" value="2" />
+      <input type="radio" name="r" value="3" />
+    </div>
+    <button id="showValue">Показать значение</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
