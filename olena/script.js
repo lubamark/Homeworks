@@ -21,6 +21,12 @@ button.addEventListener("click", function () {
   input2.value = "";
   input3.value = "";
   input4.value = "";
+  input2.addEventListener("focus", getStart);
+  input3.addEventListener("focus", getStart);
+  input4.addEventListener("focus", getStart);
+  function getStart() {
+    paragraph2.textContent = "Ответ";
+  }
 });
 
 //3
@@ -40,6 +46,7 @@ sumNumber.addEventListener("focus", function () {
 //4
 let input6 = document.querySelector("#inp6");
 input6.addEventListener("blur", function () {
+  if (!input6.value) return;
   let sum = 0;
   let arr = input6.value.split(",");
   for (let elem of arr) {
@@ -58,6 +65,7 @@ let input9 = document.querySelector("#inp9");
 let input10 = document.querySelector("#inp10");
 
 input7.addEventListener("blur", function () {
+  if (!input7.value) return;
   let arr = input7.value.split(" ");
   input8.value = arr[0];
   input9.value = arr[1];
@@ -73,6 +81,7 @@ input7.addEventListener("focus", function () {
 //6
 let input11 = document.querySelector("#inp11");
 input11.addEventListener("blur", function () {
+  if (!input11.value) return;
   let arr = input11.value.split(" ");
   let arr2 = [];
   for (let elem of arr) {
@@ -87,6 +96,7 @@ input11.addEventListener("focus", function () {
 //7
 let input12 = document.querySelector("#inp12");
 input12.addEventListener("blur", function () {
+  if (!input12.value) return;
   let arr = input12.value.split(" ");
   input12.value = arr.length;
 });
@@ -124,23 +134,15 @@ input14.addEventListener("focus", function () {
 //10
 let input15 = document.querySelector("#inp15");
 input15.addEventListener("blur", function () {
-  let split = input15.value.split("");
-
-  for (let elem of split) {
-    if (Number(elem) === 3) {
-      input15.value = true;
-      break;
-    } else {
-      input15.value = false;
-    }
-  }
+  if (!input16.value) return;
+  input15.value = input15.value.includes("3");
 });
 input15.addEventListener("focus", function () {
   input15.value = "";
 });
 
 //11
-let paragraph13 = document.querySelectorAll("#elem13");
+let paragraph13 = document.querySelectorAll(".elem13");
 let button15 = document.querySelector("#button15");
 let button16 = document.querySelector("#button16");
 button15.addEventListener("click", function () {
@@ -156,7 +158,7 @@ button16.addEventListener("click", function getClean() {
 });
 
 //12
-let site = document.querySelectorAll("#elem14");
+let site = document.querySelectorAll(".elem14");
 let button17 = document.querySelector("#button17");
 button17.addEventListener("click", addLink);
 function addLink() {
@@ -168,17 +170,17 @@ function addLink() {
 }
 
 //13
-let site2 = document.querySelectorAll("#elem15");
+let site2 = document.querySelectorAll(".elem15");
 let button18 = document.querySelector("#button18");
-button18.addEventListener("click", function addArrow() {
+button18.addEventListener("click", addArrow);
+function addArrow() {
   for (let elem of site2) {
-    if (elem.href.indexOf("http://") === 0) {
+    if (elem.href.startsWith("http://") === true) {
       elem.textContent = elem.textContent + "\u2192";
     }
   }
   this.removeEventListener("click", addArrow);
-});
-
+}
 //14
 let paragraph16 = document.querySelector("#elem16");
 let paragraph17 = document.querySelector("#elem17");
@@ -193,6 +195,7 @@ function getSquareOfNumber() {
 //15
 let input19 = document.querySelector("#elem19");
 input19.addEventListener("blur", function () {
+  if (!input19.value) return;
   let date = new Date(input19.value.split(".").reverse().join(","));
   let day = date.getDay();
   let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
@@ -270,8 +273,8 @@ button28.addEventListener("click", function () {
 //21
 let input29 = document.querySelector("#elem29");
 let button30 = document.querySelector("#elem30");
-let arr = [];
 button30.addEventListener("click", function () {
+  let arr = [];
   let split = input29.value.split("");
   for (let elem of split) {
     arr.push((arr[elem] = split[getRandom(0, split.length - 1)]));
@@ -296,10 +299,10 @@ let button34 = document.querySelector("#elem34");
 let paragraph32 = document.querySelector("#paragraph32");
 let total = 1;
 button34.addEventListener("click", function getFactorial() {
+  if (!input6.value) return;
   let elem = Number(input33.value);
   for (let i = 1; i <= elem; i++) {
     paragraph32.textContent = total *= i;
-    //this.removeEventListener("click", getFactorial);
   }
 });
 input33.addEventListener("focus", function () {
