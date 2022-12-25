@@ -97,7 +97,7 @@ input11.addEventListener("focus", function () {
 let input12 = document.querySelector("#inp12");
 input12.addEventListener("blur", function () {
   if (!input12.value) return;
-  let arr = input12.value.split(" ");
+  let arr = input12.value.trim().split(" ");
   input12.value = arr.length;
 });
 input12.addEventListener("focus", function () {
@@ -189,7 +189,7 @@ paragraph16.addEventListener("click", getSquareOfNumber);
 paragraph17.addEventListener("click", getSquareOfNumber);
 paragraph18.addEventListener("click", getSquareOfNumber);
 function getSquareOfNumber() {
-  this.textContent *= this.textContent;
+  this.textContent = Number(this.textContent) * Number(this.textContent);
 }
 
 //15
