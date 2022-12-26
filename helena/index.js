@@ -70,8 +70,8 @@ function addWidthAndHeight() {
 //264(2)
 let div1 = document.querySelector('#div1');
 let button1 = document.querySelector('#button1');
-button1.addEventListener('click', SetSize);
-function SetSize() {
+button1.addEventListener('click', setSize);
+function setSize() {
 	div1.style.fontSize = "20px";
 	div1.style.backgroundColor = "red";
 	div1.style.borderTop = "solid blue";
@@ -192,15 +192,12 @@ function setText() {
 	elem6.textContent = '!!!';
 	console.log('267(1) '+ elem6);
 }
-//267(2) Невозможно решить через getElementsByTagName
-let elems = document.getElementsByTagName('li');
-let button18 = document.querySelector('#button18');
-button18.addEventListener('click', getAllLiTag);
-function getAllLiTag() {
-	for (let elem7 of elems) {
-		elem7.style.color = "red";
-	}
-}
+//267(2) 
+const uls = document.querySelectorAll('.ul1 li');
+	uls.forEach((li) => {
+		li.style.color = 'red';
+	})
+	
 //267(3)
 let elems1 = document.getElementsByClassName('www1');
 let button19 = document.querySelector('#button19');
@@ -394,7 +391,7 @@ function getSumOfNumbers() {
 //273(4)
 let elem29 = document.querySelector('#elem29');
 elem29.addEventListener('blur', getAv);
-let paragr14 = document.getElementById("paragr14");
+let paragr14 = document.querySelector(".hyph");
 function getAv() {
 	let str = elem29.value;
 	let splits = str.split(',');
@@ -404,7 +401,7 @@ function getAv() {
 	let av = sum3 / splits.length;
 	console.log(av);
 	//хотела в инпуте перенести , но и "/n" не работает
-	paragr14.innerHTML = "Sum of elements = " + sum3  + "  Average = " + av;
+	paragr14.innerHTML = "Sum of elements = " + sum3  + "/n" +  "Average =" + av;
 }
 
 //273(5)
@@ -457,8 +454,6 @@ let paragr16 = document.getElementById("paragr16");
 elem36.addEventListener('blur', changeFormat);
 	function changeFormat() {
 		let str = elem36.value;
-		//let arr = str.split('.');
-		//let res = arr[2] + '-' + arr[1] + '-' + arr[0];
 		let res = str.split('.').reverse().join('-')
 		paragr16.textContent = res;
 }
@@ -499,17 +494,14 @@ function addNumberToPar() {
 	paragr20.textContent = paragr20.textContent + '2';
 	paragr21.textContent = paragr21.textContent + '3';
 }
-//273(12) //я не нашла почему не видит elem51. Из-за этого задача поламалась
-//let elem39 = document.querySelector('#elem39');
-let elems5 = document.querySelectorAll(".div1");
-//let elem40 = document.querySelector('#elem40');
+//273(12) 
+
 let button29 = document.querySelector('#button29');
 button29.addEventListener('click', addBrackets);
 function addBrackets() {
-	for (let elem51 of elems5) {
-		elem51.textContent = elem51.href + '(' + elem51.href + ')';
-		//elem40.textContent = elem40.href + '(' + elem40.href + ')';
-	}
+
+	const links = document.querySelectorAll('.div1 a');
+	links.forEach((a) => { a.textContent = a.href + '(' + a.href + ')'; })
 }
 //273(13)
 let elem41 = document.querySelector('#elem41');
@@ -528,15 +520,13 @@ function addArrow() {
 }
 
 //273(14)
-let paragr22 = document.getElementById("paragr22");
-let paragr23 = document.getElementById("paragr23");
-let paragr24 = document.getElementById("paragr24");
-paragr22.addEventListener('click', getSq);
-paragr23.addEventListener('click', getSq);
-paragr24.addEventListener('click', getSq);
-function getSq() {
-	this.textContent = Math.pow(Number(this.textContent),2);
-}
+const qsParagr = document.querySelectorAll('.sq p');
+qsParagr.forEach((p) => {
+	p.addEventListener('click', function () {
+		this.textContent *= Number(this.textContent);
+	})
+})
+
 //273(15)
 let elem43 = document.querySelector('#elem43');
 let paragr25 = document.querySelector('#paragr25');
@@ -667,12 +657,14 @@ let a = document.querySelector('#elem51');
 let b = document.querySelector('#elem52');
 let c = document.querySelector('#elem53');
 let paragr30 = document.getElementById("paragr30");
-function func53() { 
+function func53() {
 	
-	let Diskr = (Number(b.value) * Number(b.value)) - 4 *(Number(a.value) * Number(c.value));
+	let Diskr = (Number(b.value) * Number(b.value)) - 4 * (Number(a.value) * Number(c.value));
 	console.log(Diskr);
-
-	let x1 = ((-Number(b.value)) + Math.sqrt(Diskr)) / (2 * Number(a.value));
-	let x2 = ((-Number(b.value)) - Math.sqrt(Diskr)) / (2 * Number(a.value));
-	paragr30.textContent = "Equation roots are " + x1 + ' , ' + x2;
+	if (Diskr < 0) paragr30.textContent = "No roots ";
+	else {
+		let x1 = ((-Number(b.value)) + Math.sqrt(Diskr)) / (2 * Number(a.value));
+		let x2 = ((-Number(b.value)) - Math.sqrt(Diskr)) / (2 * Number(a.value));
+		paragr30.textContent = "Equation roots are " + x1 + ' , ' + x2;
+	}
 }

@@ -8,5 +8,7 @@
 .bold {
 font-weight: bold;
 }
-
+.hyph {
+    white-space:pre;
+}
 
