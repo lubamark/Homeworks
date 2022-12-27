@@ -1,0 +1,14 @@
+.colored {
+    color: red;
+    
+}
+.cross {
+   text-decoration: line-through;
+}
+.bold {
+font-weight: bold;
+}
+.hyph {
+    white-space:pre;
+}
+
