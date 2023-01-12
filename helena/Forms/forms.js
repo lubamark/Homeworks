@@ -4,14 +4,14 @@ let elem = document.querySelector('#elem');
 elem.addEventListener('blur', writeTextArea);
 let paragr = document.querySelector('#paragr');
 function writeTextArea() {
-    paragr.textContent = elem.textContent;
+    paragr.textContent = elem.value;
 }
 //275(1)
 let input1 = document.querySelector('#input1');
 let button1 = document.querySelector('#button1');
 button1.addEventListener('click', blockInput);
 function blockInput() {
-    input1.disabled = 'true';
+    input1.disabled = true;
     console.log(input1.disabled);
 }
 //275(3)
@@ -20,7 +20,7 @@ let button2 = document.querySelector('#button2');
 button2.addEventListener('click', checkIsBlocked);
 let paragr1 = document.querySelector('#paragr1');
 function checkIsBlocked() {
-    if (input2.disabled = 'true')
+    if (input2.disabled === 'true')
         paragr1.textContent = 'Input is disabled';
     else paragr1.textContent = 'Input is not disabled';
 }
@@ -42,9 +42,7 @@ let button5 = document.querySelector('#button5');
 let paragr2 = document.querySelector('#paragr2');
 button5.addEventListener('click', isChecked); 
 function isChecked() {
-    if (checkbox1.checked == true)
-        paragr2.textContent = 'HI';
-    else paragr2.textContent = 'HELLO';
+    paragr2.textContent = checkbox1.checked ? 'HI' : 'HELLO';
 }
 //277(2)
 let checkbox2 = document.querySelector('#input5');
@@ -73,10 +71,7 @@ input6.addEventListener('change', function () {
 let checkbox3 = document.querySelector('#input7');
 let paragr5 = document.querySelector('#paragr5');
 checkbox3.addEventListener('change', function () {
-    if (checkbox3.checked) {
-        paragr5.textContent = 'Checkbox is checked';
-    }
-        else paragr5.textContent = 'Checkbox is not checked';
+     paragr5.textContent = checkbox3.checked ? 'Checkbox is checked' : 'Checkbox is not checked';
 });
 //279(4)
 let input8 = document.querySelector('#input8');
@@ -90,31 +85,25 @@ input8.addEventListener('change', function () {
 let input9 = document.querySelector('#input9');
 let paragr6 = document.querySelector('#paragr6');
 input9.addEventListener('input', function () {
-    if (input9.value.length === 5)
+    if (input9.value.length === 5) {
         paragr6.textContent = 'Text length is 5';
-});
+        input9.addEventListener('input', function () {
+            if (input9.value.length < 5) paragr6.textContent = 'Text length is < than 5';
+        });
+    }
+    });
 //280(2)
 let input10 = document.querySelector('#input10');
 let paragr7 = document.querySelector('#paragr7');
 let coun = 0;
-let coun1 = 0;
+
+
 let coun2 = 0;
 input10.addEventListener('input', function () {
-    while (input10.value)
-        if (input10.value.length <= 5) {
-            coun = coun + 1;
-            let amountOfLeft = 5 - coun;
-            paragr7.textContent = amountOfLeft;
-            break
-        }
-        else if (input10.value.length > 5) 
-        {
-            coun2 = coun2 + 1;
-            paragr7.textContent = coun2;
-            break
-        }
-    else break;
-});
+          if (input10.value.length <= 5)
+        paragr7.textContent = 5 - input10.value.length;
+        else paragr7.textContent = input10.value.length - 5;
+    });
 //281(1)
 let input11 = document.querySelector('#input11');
 let input12 = document.querySelector('#input12');
