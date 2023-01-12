@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+</head>
+
+<body>
+<p> 274(1) Дан текстареа и абзац. По потери фокуса в текстареа запишите его текст в абзац.</p>
+<textarea id = "elem"> textarea </textarea>
+<p id = "paragr"> paragraph</p>
+<p>275(1) Дан инпут и кнопка. По нажатию на кнопку заблокируйте инпут.</p>
+<input id = "input1">
+<button id="button1"> Block</button>
+<p>275(3) Дан инпут и кнопка. По нажатию на кнопку узнайте, заблокирован инпут или нет.</p>
+<input id="input2">
+<button id="button2"> Is Blocked</button>
+<p id = "paragr1"></p>
+<p> 276(1) Дан чекбокс и две кнопки. По нажатию на первую кнопку установите чекбокс в 
+    отмеченное состояние, а по нажатию на вторую - в неотмеченное.</p>
+<input id="input3" type = "checkbox" >
+<button id="button3"> checked</button>
+<button id="button4"> not checked</button>
+<p> 276(2) Дан чекбокс, кнопка и абзац. По нажатию на кнопку, если чекбокс отмечен, выведите в 
+    абзац слово 'HI', а если чекбокс не отмечен, то слово 'HELLO'. </p>
+<input id="input4" type="checkbox">
+<button id="button5"> checked</button>
+<p id="paragr2"></p>
+<p> 277(2) Дан чекбокс и кнопка. Сделайте так, чтобы каждый клик по кнопке приводил к смене состояния чекбокса.</p>
+<input id="input5" type="checkbox">
+<button id="button6"> Change</button>
+<p> 278 (1)Даны 3 радиокнопки, абзац и кнопка. По клику на кнопку выведите в абзац value отмеченной радиокнопки.</p>
+<input type="radio" name="radiob" value="1" checked>
+<input type="radio" name="radiob" value="2">
+<input type="radio" name="radiob" value="3">
+<button id="button7"> Value of checked</button>
+<p id="paragr3"></p>
+<p> 279(1) Дан инпут и абзац. По изменению инпута выведите его текст в абзац.</p>
+<input id="input6">
+<p id="paragr4"></p>
+<p> 279(2) Дан чекбокс. По изменению чебокса выведите на экран его новое состояние.</p>
+<input id="input7" type="checkbox">
+<p id="paragr5"></p>
+<p> 279(4) Дан инпут. По его изменению проверьте, количество символов в нем меньше 5-ти или нет. 
+    Если меньше - покрасьте границу инпута в зеленый цвет, а если больше - в красный.</p>
+<input id="input8">
+<p>280 (1) Дан инпут. Пусть в него вводится текст. Как только длина текста достигнет 5-ти, выведите на экран сообщение об этом.</p>
+<input id="input9">
+<p id="paragr6"></p>
+<p> 280(2) Дан инпут. Пусть в него разрешено ввести 5 символов. Дан также абзац. По мере ввода символов в инпут пишите, 
+    сколько еще символов можно ввести. Когда количество символов превысит 5-ти, то в абзац выводите то, на сколько символов 
+    превышена длина текста.</p>
+<input id="input10">
+<p id="paragr7"></p>
+<p>281(1)Даны два инпута. Сделайте так, чтобы после ввода двух символов фокус ввода переходил ко второму инпуту, 
+а после ввода двух символов в этот инпут - фокус из него убирался. </p>
+<input id="input11">
+<input id="input12">
+<p>282(1) Дан селект, абзац и кнопка. По клику на кнопку выведите текст выбранного пункта списка в абзац.</p>
+<select id="select">
+    <option>one</option>
+    <option selected>two</option>
+    <option>three</option>
+</select>
+<p id ="paragr8">  </p>
+<button id="button8"> Select</button>
+<p> 282(2) Сделайте выпадающий список годов от 2020 до 2030. При выборе какого-нибудь пункта списка 
+    выведите сообщение о том, високосный этот год или нет. </p>
+<select id="selectYears">
+    <option>2020</option>
+    <option>2021</option>
+    <option selected>2022</option>
+    <option>2023</option>
+    <option>2024</option>
+    <option>2025</option>
+    <option>2026</option>
+    <option>2027</option>
+    <option>2028</option>
+    <option>2029</option>
+    <option>2030</option>
+</select>
+<p> 
+<p> 282(3) Сделайте выпадающий список с названиями дней недели. В качестве атрибутов value пунктов списка 
+добавьте номера дней недели от 1 до 7. По изменению списка выведите на экран сообщение о том, выбран выходной день 
+или рабочий. <p>
+<select id="selectDay">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<p id="paragr9"> </p>
+<p> 283(1) Сделайте выпадающий список с названиями месяцев. Сделайте так, чтобы JavaScript по умолчанию выбирал в 
+этом списке текущий месяц.</p>
+<select id="selectMonth">
+    <option value="1">January</option>
+    <option value="2" selected>February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+</select>
+<p> 284(1) Дан инпут и селект. В инпут вводится какое-то число. По потери фокуса сделайте выделенным 
+пункт списка, номер которого равен значению из инпута. </p>
+<select id="select1">
+    <option value="1">One</option>
+    <option value="2" selected>Two</option>
+    <option value="3">Three</option>
+</select>
+<input id="input13" type ='number' min = 0 max = 2>
+<p> 284(2) Сделайте выпадающий список с названиями дней недели. Сделайте так, чтобы по JavaScript по 
+умолчанию выбирал в этом списке текущий день. </p>
+<select id="selectDay1">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<p> 285(1) Переберите все пункты списка циклом и в конец текста каждого пункта добавьте значение его атрибута value.</p>
+<select id="selectDay2">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<p>286(1) Переберите пункты списка циклом и для выбранного пункта в конец текста добавьте восклицательный знак, а для невыбранных
+пунктов - вопросительный. </p>
+<select id="selectDay3">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<p>286(2) Дан выпадающий список и кнопка. По клику на кнопку сделайте отмеченным последний пункт списка. </p>
+<select id="selectDay4">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<button id="button9"> Select</button>
+<p>286(3) Дан селект и кнопка. По нажатию на кнопку выведите на экран текст отмеченного пункта списка. </p>
+<select id="selectDay5">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<button id="button10"> Select</button>
+<p id="paragr10"> </p>
+<p>286(4) Дан селект и кнопка. По нажатию на кнопку добавьте в конец текста выбранного пункта восклицательный знак. </p>
+<button id="button11"> Select</button>
+<select id="selectDay6">
+    <option value="1">Понедельник</option>
+    <option value="2" selected>Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+    <option value="7">Воскресенье</option>
+</select>
+<script src="forms.js"></script>
+</body>
+
+</html>
