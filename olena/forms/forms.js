@@ -4,7 +4,7 @@
 let paragraph = document.querySelector("#elem");
 let textarea = document.querySelector("#elem1");
 textarea.addEventListener("blur", function () {
-  textarea.value = paragraph.textContent;
+  paragraph.textContent = textarea.value;
 });
 textarea.addEventListener("focus", getStart);
 
@@ -45,11 +45,7 @@ let button6 = document.querySelector("#elem10");
 let paragraph2 = document.querySelector("#elem11");
 
 button6.addEventListener("click", function () {
-  if (input3.checked) {
-    paragraph2.textContent = "Привет";
-  } else {
-    paragraph2.textContent = "Пока";
-  }
+  paragraph2.textContent = input3.checked ? "Привет" : "Пока";
 });
 
 //277.2
@@ -83,11 +79,7 @@ input5.addEventListener("focus", getStart);
 let input6 = document.querySelector("#elem19");
 let paragraph5 = document.querySelector("#elem20");
 input6.addEventListener("change", function () {
-  if (input6.checked) {
-    paragraph5.textContent = "Отмечено";
-  } else {
-    paragraph5.textContent = "Не отмечено";
-  }
+  paragraph5.textContent = input6.checked ? "Отмечено" : "Не отмечено";
 });
 
 //279.4
