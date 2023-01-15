@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+</head>
+
+<body>
+    <h1>Olena's homework</h1>
+
+    <!--274-->
+    <h3>Работа с текстареа в JavaScript</h3>
+    <ol>
+        <li>Дан текстареа и абзац. По потери фокуса в текстареа запишите его текст в абзац.</li>
+        <p id="elem">Абзац</p>
+        <textarea id="elem1"></textarea>
+    </ol>
+
+    <!--275-->
+    <h3>Атрибут disabled в JavaScript</h3>
+    <ol>
+        <li>Дан инпут и кнопка. По нажатию на кнопку заблокируйте инпут.</li>
+        <li>Дан инпут и две кнопки. Пусть нажатие на первую кнопку блокирует инпут, а нажатие на вторую - отблокирует.
+        </li>
+        <li>Дан инпут и кнопка. По нажатию на кнопку узнайте, заблокирован инпут или нет.</li>
+        <input id="elem2">
+        <button id="elem3">Заблокировать</button>
+        <button id="elem4">Разблокировать</button>
+        <button id="elem5">Узнать статус</button>
+    </ol>
+
+    <!--276-->
+    <h3>Работа с чекбоксами в JavaScript</h3>
+    <ol>
+        <li>Дан чекбокс и две кнопки. По нажатию на первую кнопку установите чекбокс в отмеченное состояние, а по
+            нажатию на вторую - в неотмеченное.</li>
+        <input id="elem6" type="checkbox">
+        <button id="elem7">Отмечен</button>
+        <button id="elem8">Не отмечен</button>
+
+        <li>Дан чекбокс, кнопка и абзац. По нажатию на кнопку, если чекбокс отмечен, выведите
+            в абзац слово 'привет', а если чекбокс не отмечен, то слово 'пока'.</li>
+        <input id="elem9" type="checkbox">
+        <button id="elem10">Статус</button>
+        <p id="elem11"></p>
+    </ol>
+
+    <!--277-->
+    <h3>Чередование атрибутов без значений</h3>
+    <ol>
+        <li>Дан чекбокс и кнопка. Сделайте так, чтобы каждый клик по кнопке приводил к смене состояния чекбокса.</li>
+        <input type="checkbox" id="elem12">
+        <button id="elem13">Заблокировать/Разблокировать</button>
+    </ol>
+
+    <!--278-->
+    <h3>Работа с радиокнопками в JavaScript</h3>
+    <ol>
+        <li>Даны 3 радиокнопки, абзац и кнопка. По клику на кнопку выведите в абзац value отмеченной радиокнопки.</li>
+        <input type="radio" name="elem14" value="1">
+        <input type="radio" name="elem14" value="2">
+        <input type="radio" name="elem14" value="3">
+        <button id="elem15">Номер</button>
+        <p id="elem16"></p>
+    </ol>
+
+    <!--279-->
+    <h3>Событие change в JavaScript</h3>
+    <ol>
+        <li>Дан инпут и абзац. По изменению инпута выведите его текст в абзац.</li>
+        <input id="elem17">
+        <p id="elem18"></p>
+
+        <li>Дан чекбокс. По изменению чебокса выведите на экран его новое состояние.</li>
+        <input type="checkbox" id="elem19">
+        <p id="elem20"></p>
+
+        <li>Дан инпут. По его изменению проверьте, количество символов в нем меньше 5-ти или нет. Если меньше -
+            покрасьте границу инпута в зеленый цвет, а если больше - в красный.</li>
+        <input id="elem21">
+    </ol>
+
+    <!--280-->
+    <h3>Событие input в JavaScript</h3>
+    <ol>
+        <li>Дан инпут. Пусть в него вводится текст. Как только длина текста достигнет 5-ти, выведите на экран сообщение
+            об этом.</li>
+        <input id="elem22" type="text">
+        <p id="elem23"></p>
+
+        <li>Дан инпут. Пусть в него разрешено ввести 5 символов. Дан также абзац. По мере ввода символов в инпут пишите,
+            сколько еще символов можно ввести. Когда количество символов превысит 5-ти, то в абзац выводите то, на
+            сколько символов превышена длина текста.</li>
+        <input id="elem24">
+        <p id="elem25"></p>
+    </ol>
+
+    <!--281-->
+    <h3>Методы focus и blur в JavaScript</h3>
+    <ol>
+        <li>Даны два инпута. Сделайте так, чтобы после ввода двух символов фокус ввода переходил ко второму инпуту, а
+            после ввода двух символов в этот инпут - фокус из него убирался.</li>
+        <input id="elem26">
+        <input id="elem27">
+    </ol>
+
+    <!--282-->
+    <h3>Работа с выпадающими списками в JavaScript</h3>
+    <ol>
+        <li>Дан селект, абзац и кнопка. По клику на кнопку выведите текст выбранного пункта списка в абзац.
+            <select id="elem28">
+                <option selected>Текст1</option>
+                <option>Текст2</option>
+                <option>Текст3</option>
+            </select>
+            <p id="elem29"></p>
+            <button id="elem30">Ответ</button>
+        </li>
+        <li>Сделайте выпадающий список годов от 2020 до 2030. При выборе какого-нибудь пункта списка выведите сообщение
+            о том, високосный этот год или нет.</li>
+        <select id="elem31">
+            <option selected>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+        </select>
+        <p id="elem32"></p>
+
+        <li>Сделайте выпадающий список с названиями дней недели. В качестве атрибутов value пунктов списка добавьте
+            номера дней недели от 1 до 7. По изменению списка выведите на экран сообщение о том, выбран выходной день
+            или рабочий.
+        </li>
+        <select id="elem33">
+            <option selected value="1">Понедельник</option>
+            <option value="2">Вторник</option>
+            <option value="3">Среда</option>
+            <option value="4">Четверг</option>
+            <option value="5">Пятница</option>
+            <option value="6">Суббота</option>
+            <option value="7">Воскресенье</option>
+        </select>
+        <p id="elem34"></p>
+    </ol>
+
+    <!--283-->
+    <h3>Изменение выбранного пункта списка на JavaScript</h3>
+    <ol>
+        <li>Сделайте выпадающий список с названиями месяцев. Сделайте так, чтобы JavaScript по умолчанию выбирал в этом
+            списке текущий месяц.</li>
+        <select id="elem35">
+            <option value="0">Январь</option>
+            <option value="1">Февраль</option>
+            <option value="2">Март</option>
+            <option value="3">Апрель</option>
+            <option value="4">Май</option>
+            <option value="5">Июнь</option>
+            <option value="6">Июль</option>
+            <option value="7">Август</option>
+            <option value="8">Сентябрь</option>
+            <option value="9">Октябрь</option>
+            <option value="10">Ноябрь</option>
+            <option value="11">Декабрь</option>
+        </select>
+    </ol>
+
+    <!--284-->
+    <h3>Номер выбранного пункта выпадающего списка</h3>
+    <ol>
+        <li>Дан инпут и селект. В инпут вводится какое-то число. По потери фокуса сделайте выделенным пункт списка,
+            номер которого равен значению из инпута.</li>
+        <input id="elem36" type="number">
+        <select id="elem37">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+
+        <li>Сделайте выпадающий список с названиями дней недели. Сделайте так, чтобы по JavaScript по умолчанию выбирал
+            в этом списке текущий день.</li>
+        <select id="elem38">
+            <option value="1">Понедельник</option>
+            <option value="2">Вторник</option>
+            <option value="3">Среда</option>
+            <option value="4">Четверг</option>
+            <option value="5">Пятница</option>
+            <option value="6">Суббота</option>
+            <option value="7">Воскресенье</option>
+        </select>
+    </ol>
+
+    <!--285-->
+    <h3>Получение пунктов выпадающего списка на JavaScript</h3>
+    <ol>
+        <li>Переберите все пункты списка циклом и в конец текста каждого пункта добавьте значение его атрибута value.
+        </li>
+        <select id="elem39">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+        <button id="elem40">Добавить</button>
+    </ol>
+
+    <!--286-->
+    <h3>Работа с пунктами выпадающего списка на JavaScript</h3>
+    <ol>
+        <li>Переберите пункты списка циклом и для выбранного пункта в конец текста добавьте восклицательный знак, а для
+            невыбранных пунктов - вопросительный.</li>
+        <select id="elem41">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+
+        <li>Дан выпадающий список и кнопка. По клику на кнопку сделайте отмеченным последний пункт списка.</li>
+        <select id="elem42">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+        <button id="elem43">Последний пункт</button>
+
+        <li>Дан селект и кнопка. По нажатию на кнопку выведите на экран текст отмеченного пункта списка.</li>
+        <select id="elem44">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+        <button id="elem45">Ответ</button>
+        <p id="elem46"></p>
+
+        <li>Дан селект и кнопка. По нажатию на кнопку добавьте в конец текста выбранного пункта восклицательный знак.
+        </li>
+        <select id="elem47">
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
+            <option value="4">Четыре</option>
+            <option value="5">Пять</option>
+        </select>
+        <button id="elem48">Ответ</button>
+    </ol>
+
+    <!--287-->
+    <h3>Поиск ошибок в коде с формами в JavaScript</h3>
+    <ol>
+        <li>По потери фокуса текст из textarea должен записаться в див:</li>
+        <textarea id="elem49"></textarea>
+        <div id="elem50"></div>
+
+        <li>По клику на кнопку в див должно записаться или одно, или другое значение:</li>
+        <input type="checkbox" id="elem51">
+        <div id="elem52"></div>
+        <button id="elem53">button</button>
+
+        <li>По клику на кнопку, если чекбокс отмечен, то должно вывестись одно значение, а если не отмечен - другое:
+        </li>
+        <input type="checkbox" id="elem54">
+        <button id="elem55">button</button>
+    </ol>
+    <script src="forms.js"></script>
+</body>
+
+</html>
