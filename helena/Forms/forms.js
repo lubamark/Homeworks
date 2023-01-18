@@ -85,13 +85,9 @@ input8.addEventListener('change', function () {
 let input9 = document.querySelector('#input9');
 let paragr6 = document.querySelector('#paragr6');
 input9.addEventListener('input', function () {
-    if (input9.value.length === 5) {
-        paragr6.textContent = 'Text length is 5';
-        input9.addEventListener('input', function () {
-            if (input9.value.length < 5) paragr6.textContent = 'Text length is < than 5';
-        });
-    }
-    });
+   paragr6.textContent = input9.value.length >= 5 ? "Длина достигла 5 знаков" : '';
+   
+   });
 //280(2)
 let input10 = document.querySelector('#input10');
 let paragr7 = document.querySelector('#paragr7');
@@ -100,9 +96,8 @@ let coun = 0;
 
 let coun2 = 0;
 input10.addEventListener('input', function () {
-          if (input10.value.length <= 5)
-        paragr7.textContent = 5 - input10.value.length;
-        else paragr7.textContent = input10.value.length - 5;
+    if (input10.value.length <= 5) { paragr7.textContent = 5 - input10.value.length; }
+    else { paragr7.textContent = input10.value.length - 5; }
     });
 //281(1)
 let input11 = document.querySelector('#input11');
@@ -113,7 +108,7 @@ input11.addEventListener('input', function () {
             input12.focus();
             break
         }
-    else break;
+    else {break};
 });
 input12.addEventListener('input', function () {
     while (input12.value)
@@ -121,7 +116,7 @@ input12.addEventListener('input', function () {
             input12.blur();
             break
         }
-    else break;
+    else {break};
 });
 //282(1)
 let button8 = document.querySelector('#button8');
