@@ -2,10 +2,6 @@
 
 //288(1)
 let button1 = document.querySelector('#button1');
-
-button1.addEventListener('click', function() {
-
-});
 button1.addEventListener('click', function(event) {
 	console.log(event); // увидим объект с событием
 });
@@ -29,15 +25,17 @@ function func(event) {
 let ul1 = document.querySelector('#ul1');
 ul1.addEventListener('click', function(event) {
 var li = event.target.closest("li");
-	if (li) {
-		li.innerHTML +="!"; 
+
+  if (event.target.tagName === 'LI') {
+    li.innerHTML += "!";
   }
-  var ul = event.target.closest("ul");
-  if (ul) {
+  if (event.target.tagName === 'UL') {
+    var ul = event.target.closest("ul");
     let liLast = document.createElement('li');
-     liLast.innerHTML = 'append';
-     ul1.append(liLast);
+    liLast.innerHTML = 'append';
+    ul.append(liLast);
   }
+	
 });
 
 //292(1)
@@ -50,7 +48,7 @@ input1.addEventListener('keypress', function(event) {
 let input2 = document.querySelector('#input2');
 let paragr = document.querySelector('#paragr');
 input2.addEventListener('keypress', function(event) {
-      if (event.code == 'Enter') {
+    if (event.code === 'Enter') {
       paragr.textContent = input2.value;
       input2.value = "";
     }
@@ -59,7 +57,7 @@ input2.addEventListener('keypress', function(event) {
 let button3 = document.querySelector('#button3');
 button3.addEventListener('click', function(event) {
   if (event.altKey) {
-   button3.style.backgroundColor= "red";
+    button3.style.backgroundColor= "red";
     }
 });
 //293(2)
@@ -88,6 +86,7 @@ let input4 = document.querySelector('#input4');
 let paragr1 = document.querySelector('#paragr1');
 
 link1.addEventListener('click', function (event) {
+  paragr1.textContent = 'Сумма чисел = ';
 	event.preventDefault();
   paragr1.textContent = paragr1.textContent+ (Number(input3.value)+Number(input4.value));
 });
