@@ -1,0 +1,31 @@
+ul {
+    padding: 30px;
+    border: 1px solid red;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    border: 1px dashed black;
+}
+.div1,
+.ul1,
+.li1,
+.div2,
+.ul3, 
+.li2
+{
+    padding: 20px;
+}
+
+.div1, .div2 {
+    border: 1px solid red;
+}
+
+.ul1, .ul3 {
+    border: 1px solid orange;
+}
+
+.li1, .li2 {
+    border: 1px solid green;
+}
