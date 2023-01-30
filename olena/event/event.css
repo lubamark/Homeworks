@@ -1,0 +1,29 @@
+#elem4 {
+  padding: 30px;
+  border: 1px solid red;
+}
+#elem4 li {
+  list-style-type: none;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+}
+
+#elem15,
+#elem15 ul,
+#elem15 ul li {
+  padding: 20px;
+}
+
+#elem15 {
+  border: 1px solid red;
+}
+#elem15 ul {
+  border: 1px solid orange;
+}
+#elem15 ul li {
+  border: 1px solid green;
+}
+
+#elem18:not(.active) {
+  display: none;
+}
