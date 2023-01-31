@@ -7,7 +7,7 @@ function func() {
 	let self = this;// запишем this в любую переменную, например, в self
 	alert( square() );
 	function square() {
-		return self.value * self.value;
+		return Number(self.value) * Number(self.value);
 	}
 }
 //304(2)
@@ -16,7 +16,7 @@ inp2.addEventListener('blur', parent);
 function parent() {
 	child(this); // передаем параметром this
 	function child(param) {
-		console.log(param.value*param.value); // выводим value инпута в квадрате
+		console.log(Number(param.value)*Number(param.value)); // выводим value инпута в квадрате
 	}
 }
 //304(3)
@@ -24,7 +24,7 @@ let inp3 = document.querySelector('#inp3');
 inp3.addEventListener('blur', arrfunc);
 function arrfunc() {
 	let arrchild = () => {
-		console.log(this.value*this.value); // выведет 'text'
+		console.log(Number(this.value)*Number(this.value)); // выведет 'text'
 	}
 	arrchild();
 }
@@ -59,14 +59,14 @@ funcApply.apply(inp8, ['Smith', 'John']); // тут должно вывести 
 //307(1)
 let inp9 = document.getElementById('inp9');
 
-function funcBind(name, surname) {
+function funcName(name, surname) {
 	console.log(this.value + ', ' + name + ' ' + surname);
 }
 console.log('307(1)')
 // тут напишите конструкцию с bind()
-funcBind = funcBind.bind(inp9);
-funcBind("John", "Smit"); // тут должно вывести 'hello, John Smit'
-funcBind('Eric', 'Luis'); // тут должно вывести 'hello, Eric Luis'
+funcName = funcName.bind(inp9);
+funcName("John", "Smit"); // тут должно вывести 'hello, John Smit'
+funcName('Eric', 'Luis'); // тут должно вывести 'hello, Eric Luis'
 
 //308 Эта задачка решена, просто я ее закомментировала, чтоб она не мешала работе всей программы
 //setInterval(function() {
@@ -131,7 +131,7 @@ startButton1.addEventListener('click', function() {
 stopButton1.addEventListener('click', function() {
 	clearInterval(timerId1);
 });
-//312(6) Не знаю как привязать и что привязать по нажатию кнопки стоп
+//312(6) 
 let startButton2 = document.querySelector('#startButton2');
 let stopButton2 = document.querySelector('#stopButton2');
 startButton2.addEventListener('click', timer3);
@@ -149,6 +149,7 @@ function timer4() {
 	// Останавливаем таймер:
 	stopButton2.addEventListener('click', function () {
 		clearInterval(timerId2);
+		startButton2.addEventListener('click', timer3);
 	});
 }
 //313 (2-3)
@@ -194,7 +195,7 @@ setInterval(() => inp11.value = Number(inp11.value)*Number(inp11.value), 1000);
 let paragr1 = document.querySelector('#paragr1');
 paragr1.style.color="red";
 setInterval(function(){
- if(paragr1.style.color == "red"){
+ if(paragr1.style.color === "red"){
     paragr1.style.color="green";
  } else {
     paragr1.style.color="red";
