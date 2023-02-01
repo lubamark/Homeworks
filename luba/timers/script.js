@@ -25,7 +25,6 @@ console.log('timers!');
 // }
 
 // Счетчик
-
 const start = document.getElementById('start');
 const stop = document.getElementById('stop');
 const count = document.getElementById('count');
@@ -48,3 +47,27 @@ stop.addEventListener('click', function () {
   clearInterval(intCount);
   intCount = null;
 });
+
+// setTimeout
+// let timeout = setTimeout(() => {
+//   console.log('123');
+// }, 3000);
+
+// debounce
+const input = document.getElementById('input');
+const p = document.getElementById('p');
+let timeout;
+
+input.addEventListener('keyup', debounce);
+
+function pasteValue() {
+  p.textContent = input.value;
+}
+
+function debounce() {
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  timeout = setTimeout(pasteValue, 5000);
+}
+
