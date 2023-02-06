@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p> 317(1) Дан абзац. Напишите код, который выведет сообщение в этот абзац через 10 секунд после загрузки страницы. </p>
+<p id="paragr">
+<p> 317(2) Выведите в консоль число 0. Через секунду выведите число 1, через две секунды выведите число 2, через 3 секунды выведите
+число 3. И так далее до бесконечности. </p>
+<p> 318(1) Дан ol: Вставьте ему в конец li с текстом 'item'.</p>
+<ol id="ol"></ol>
+<p> 318(2) Дан ol и кнопка: Сделайте так, чтобы по клику на кнопку в конец списка добавлялся li с текстом 'item'.</p>
+<ol id="ol1"></ol>
+<button id="button">add li</button>
+<p> 319(1) Дан ol и кнопка. Сделайте так, чтобы по клику на кнопку в конец ol добавлялся тег li. Сделайте так, чтобы по клику на
+любой из добавленных li в конец его текста записывался восклицательный знак.
+<ol id="ol2"></ol>
+<button id="button1">add li</button>
+<p> 320 Дан пустой ul. Запустите цикл, который вставит в него 10 тегов li. Сделайте так, чтобы текстом каждой li был ее
+порядковый номер. </p>
+<ul id="ul"></ul>
+<p> 321 Дан див. Запустите цикл, который добавит в наш див 5 инпутов. Пусть дан также абзац. Сделайте так, чтобы каждый из новых
+инпутов по потери фокуса записывал свой текст в абзац.</p>
+<div id ="div">   </div>
+<p id="paragr1"> </p>
+<p>322(1) Сделайте так, чтобы любая li удалялась по клику на нее. </p>
+<ul>
+    <li class ="lli">1</li>
+    <li class = "lli">2</li>
+    <li class ="lli">3</li>
+</ul>
+<p> 322(2) Сделайте так, чтобы по каждому клику на кнопку удалялся последний элемент из #parent. </p>
+<ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<input type="submit" id="button2">
+<p>323(1) Вставьте ему в начало элемент с текстом 'start', а в конец - элемент с текстом 'finish'. </p>
+<ul id="ul1">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<p>323(2) Вставьте перед этим элементом элемент с текстом 'new'. </p>
+<ul id="ul2">
+    <li>text</li>
+    <li>text</li>
+    <li id="libefore">text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<p> 323(3) Модифицируйте предыдущую задачу так, чтобы клик на вставленный элемент приводил к тому, что в 
+конец его текста будет добавляться '!'.</p>
+<p> 324(1) Вставьте перед элементом абзац с текстом '!!!' используя insertAdjacentElement </p>
+<div id="div1" style="border: 1px solid red;">
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+</div>
+<p> 324(2) Вставьте после элемента абзац с текстом '!!!' используя insertAdjacentElement </p>
+<div id="div2" style="border: 1px solid red;">
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+</div>
+<p> 324(3) Вставьте в начало абзац с текстом '!!!'. используя insertAdjacentElement </p>
+<div id="div3" style="border: 1px solid red;">
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+</div>
+<p> 324(3) Вставьте в конец абзац с текстом '!!!'. используя insertAdjacentElement </p>
+<div id="div4" style="border: 1px solid red;">
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+</div>
+<p> 324(5) Дан элемент. Вставьте перед ним следующий тег:</p>
+<div id="div5" style="border: 1px solid red;">
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+</div>
+<!--<div class="www">
+    <p>text</p>
+    <p>text</p><input>
+</div>
+-->
+<p> 325 Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.</p>
+<input id="input1">
+<button id="button3">Clone</button>
+<div id = "div8"></div>
+<p> 326(1) Проверьте, является ли этот элемент элементом с классом www.</p>
+<div id="div6" class="www1"></div>
+<p> 326(2) Дан элемент. Проверьте, является ли этот элемент абзацем. </p>
+<p> 326(3) Даны две переменные div7 и paragr8, содержащие два элемента: Проверьте, является ли элемент из paragr2 
+    потомком элемента из div1. </p>
+<div id="div7">
+    <p id="paragr2"></p>
+</div>
+<p> 327Модифицируйте мой код так, чтобы по клику на абзац к его содержимому прибавлялась единица.</p>
+<div id="div9"></div>
+<script src="elements.js"></script>
+</body>
+
+</html>
