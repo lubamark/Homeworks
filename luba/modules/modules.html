@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Modules</title>
+  </head>
+  <body>
+    <h2>Модули и конфликты переменных</h2>
+    <div id="div1">3</div>
+    <div id="div2">2</div>
+
+    <hr />
+
+    <h2>Передача параметров в модули</h2>
+
+    <div id="div3">4</div>
+
+    <hr />
+
+    <h2>Передача родительского компонента</h2>
+    <ul id="ul1">
+      <li id="li1">li1</li>
+      <li id="li2">li2</li>
+      <li id="li3">li3</li>
+    </ul>
+
+    <h3>дропдаун</h3>
+
+    <div class="j-dropdown">
+      <div class="j-dropdown-header">Заголовок</div>
+      <div class="j-dropdown-body">Контент</div>
+    </div>
+
+    <!--1-->
+    <script>
+      let str = "script text";
+    </script>
+    <!--2-->
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <!--3-->
+    <script>
+      console.log(str);
+    </script>
+  </body>
+</html>
